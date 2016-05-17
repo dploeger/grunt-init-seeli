@@ -19,7 +19,7 @@ function API(name) {
 
 API.prototype.getName = function(callback) {
 
-    winston.debug("In example.getName");
+    winston.debug('In example.getName');
 
     callback(null, this.name);
 

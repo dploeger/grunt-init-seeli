@@ -14,7 +14,7 @@ cli.exitOnError = true;
 
 // Add all the available commands
 
-cli.use("example", exampleCommand);
+cli.use('example', exampleCommand);
 
 // And go!
 

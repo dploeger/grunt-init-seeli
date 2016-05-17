@@ -9,6 +9,7 @@ This template for grunt-init will provide you with a basic setup made for CLI
 * [Winston](https://github.com/winstonjs/winston)
 * [Handlebars](http://handlebarsjs.com/)
 * [Grunt](http://gruntjs.com/)
+* [Error-Factory](https://github.com/yanickrochon/error-factory)
 
 Also, the .eslintrc from https://github.com/felixge/node-style-guide is taken
 to validate your source code.

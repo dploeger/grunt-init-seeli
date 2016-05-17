@@ -10,7 +10,7 @@ var cli = require('seeli'),
     util = require('util'),
     winston = require('winston');
 
-function Command (name, data, done) {
+function Command(name, data, done) {
 
     this.name = name;
     this.data = data;
@@ -45,19 +45,19 @@ Command.prototype.run = function () {
 
         // Create a context for the template
 
-        winston.debug("Creating context for template");
+        winston.debug('Creating context for template');
 
         var context = {
-            "example": util.format(
-                "%s - %s",
-                that.data["additional-param"],
+            'example': util.format(
+                '%s - %s',
+                that.data['additional-param'],
                 data
             )
         };
 
         // Render the output using the template
 
-        winston.debug("Rendering template");
+        winston.debug('Rendering template');
 
         that.done(null, templates.example(context));
 
@@ -73,9 +73,9 @@ module.exports = new cli.Command({
         {},
         defaults.flags,
         {
-            "additional-param": {
+            'additional-param': {
                 type: String,
-                description: "Just an additional parameter"
+                description: 'Just an additional parameter'
             }
         }
     ),
@@ -83,10 +83,10 @@ module.exports = new cli.Command({
 
         // We're using an object here to be ready for complex commands
 
-        winston.debug("Running %s", name);
+        winston.debug('Running %s', name);
 
         var command = new Command(name, data, done);
-        command.run();        
+        command.run();
     }
 
 });

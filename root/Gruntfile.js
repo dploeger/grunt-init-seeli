@@ -1,5 +1,4 @@
-module.exports = function (grunt)
-{
+module.exports = function (grunt) {
 
     // Project configuration.
     //noinspection JSUnusedGlobalSymbols
@@ -17,14 +16,14 @@ module.exports = function (grunt)
             nodeunit: {
                 files: ['test/**/*_test.js'],
                 options: {
-                    reporter: "lcov"
+                    reporter: 'lcov'
                 }
             },
             handlebars: {
                 options: {
                     node: true,
-                    namespace: "templates",
-                    processName: function(filename) {
+                    namespace: 'templates',
+                    processName: function (filename) {
                         var names = filename.match(
                             /templates\/([^\.]*)\.handlebars/
                         );
@@ -34,7 +33,7 @@ module.exports = function (grunt)
                     }
                 },
                 templates: {
-                    files: {"lib/templates.js": ["templates/*.handlebars"]}
+                    files: {'lib/templates.js': ['templates/*.handlebars']}
                 }
             },
             watch: {
@@ -42,7 +41,7 @@ module.exports = function (grunt)
                     files: '<%= jshint.gruntfile.src %>',
                     tasks: ['jshint:gruntfile']
                 },
-                lib_test: {
+                'lib_test': {
                     files: '<%= jshint.lib_test.src %>',
                     tasks: ['jshint:lib_test', 'nodeunit']
                 }
@@ -50,14 +49,14 @@ module.exports = function (grunt)
         }
     );
 
-        // These plugins provide necessary tasks.
+    // These plugins provide necessary tasks.
     grunt.loadNpmTasks('grunt-contrib-nodeunit');
     grunt.loadNpmTasks('gruntify-eslint');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-handlebars');
 
     // Default task.
-    grunt.registerTask('default', ["handlebars"]);
+    grunt.registerTask('default', ['handlebars']);
 
     // Test task
     grunt.registerTask(

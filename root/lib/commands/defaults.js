@@ -8,26 +8,26 @@ module.exports = {
     flags: {
         name: {
             type: String,
-            description: "Name to use",
+            description: 'Name to use',
             required: true
         },
         loglevel: {
             type: String,
-            description: "Log-Level to use (debug, verbose, info, warn," +
-            " error)",
-            validate: function(value) {
+            description: 'Log-Level to use (debug, verbose, info, warn,' +
+            ' error)',
+            validate: function (value) {
 
-                var loglevel = value["loglevel"].toLowerCase();
+                var loglevel = value['loglevel'].toLowerCase();
 
                 if ([
-                        "debug",
-                        "verbose",
-                        "info",
-                        "warn",
-                        "error"
+                        'debug',
+                        'verbose',
+                        'info',
+                        'warn',
+                        'error'
                     ].indexOf(loglevel) === -1) {
 
-                    return "Invalid loglevel specified: " + loglevel;
+                    return 'Invalid loglevel specified: ' + loglevel;
 
                 }
 
@@ -46,11 +46,11 @@ module.exports = {
 
                         if (options.meta && Object.keys(options.meta).length) {
 
-                            output.push("\n\t" + JSON.stringify(options.meta));
+                            output.push('\n\t' + JSON.stringify(options.meta));
 
                         }
 
-                        return output.join(" ");
+                        return output.join(' ');
 
                     };
 
@@ -58,7 +58,7 @@ module.exports = {
 
             },
             required: true,
-            default: "error"
+            default: 'error'
         }
     }
 };

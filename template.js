@@ -36,7 +36,8 @@ exports.template = function (grunt, init, done) {
                 "seeli": "^0.4.3",
                 "winston": "^2.0.1",
                 "handlebars": "^4.0.3",
-                "merge": "^1.2.0"
+                "merge": "^1.2.0",
+                "error-factory": "^0.1.6"
             };
 
             props.devDependencies = {
