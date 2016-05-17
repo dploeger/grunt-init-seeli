@@ -10,6 +10,9 @@ This template for grunt-init will provide you with a basic setup made for CLI
 * [Handlebars](http://handlebarsjs.com/)
 * [Grunt](http://gruntjs.com/)
 
+Also, the .eslintrc from https://github.com/felixge/node-style-guide is taken
+to validate your source code.
+
 ## Structure
 
 The template is based on a single, executableentry point, that binds one or 
