@@ -6,20 +6,12 @@ module.exports = function (grunt)
     grunt.initConfig(
         {
             // Task configuration.
-            jshint: {
+            eslint: {
+                gruntfile: ['Gruntfile.js'],
+                lib: ['lib/**/*.js'],
+                test: ['test/**/*_test.js'],
                 options: {
-                    jshintrc: true
-                },
-                gruntfile: {
-                    src: 'Gruntfile.js'
-                },
-                lib_test: {
-                    src: ['lib/**/*.js', 'test/**/*.js']
-                }
-            },
-            apimocker: {
-                options: {
-                    configFile: "apimocker.json"
+                    configFile: '.eslintrc'
                 }
             },
             nodeunit: {
@@ -60,7 +52,7 @@ module.exports = function (grunt)
 
         // These plugins provide necessary tasks.
     grunt.loadNpmTasks('grunt-contrib-nodeunit');
-    grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('gruntify-eslint');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-handlebars');
 

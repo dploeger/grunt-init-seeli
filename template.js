@@ -43,7 +43,7 @@ exports.template = function (grunt, init, done) {
                 "grunt": "^0.4.5",
                 "grunt-cli": "^0.1.13",
                 "grunt-contrib-handlebars": "^0.11.0",
-                "grunt-contrib-jshint": "~0.10.0",
+                "gruntify-eslint": "^2.0.0",
                 "grunt-contrib-nodeunit": "~0.4.1",
                 "grunt-contrib-watch": "~0.6.1"
             };
